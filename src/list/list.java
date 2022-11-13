@@ -44,6 +44,7 @@ public class list {
             System.out.print(iterator.next() + "\t");
         }
         System.out.println();
+
         System.out.println("=====LIST ITERATOR=====");
         ListIterator<Integer> listIterator = list1.listIterator(list1.size());
         while (listIterator.hasPrevious()) {
@@ -66,5 +67,23 @@ public class list {
 
         System.out.println("=====IS EMPTY?=====");
         System.out.println("is list1 Empty? > " + list1.isEmpty());
+
+        List<newArray> list4 = new ArrayList<>();
+        list4.add(new newArray(1,2,3));
+        System.out.println("=====NEW ARRAYLIST=====");
+        for (newArray l : list4) {
+            System.out.print(l.a + "\t" + l.b + "\t" + l.c + "\t");
+        }
+    }
+}
+
+class newArray {
+    int a;
+    int b;
+    int c;
+    newArray(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 }
