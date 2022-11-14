@@ -1,6 +1,6 @@
 package lambda;
 
-public class Expression {
+public class ExpressionThread {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
             String threadName = Thread.currentThread().getName();

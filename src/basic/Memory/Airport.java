@@ -15,7 +15,7 @@ public class Airport extends Thread {
             System.out.println(getName() + " Airline take off after " + i*10 + " minutes");
             toolkit.beep();
             try {
-                sleep(1000);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 e.printStackTrace();
             }
