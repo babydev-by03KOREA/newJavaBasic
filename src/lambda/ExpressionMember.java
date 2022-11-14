@@ -13,7 +13,7 @@ public class ExpressionMember {
                 new Member("한찬민", Member.MALE, 19),
                 new Member("박예담", Member.FEMALE, 17)
         );
-        // [NO.1] 외부 반복자를 적용하여 해결! >
+
         int count = 0;
         double sum = 0;
 
@@ -27,5 +27,13 @@ public class ExpressionMember {
         double ageAvg = sum/count;
 
         System.out.println("남자 회원의 평균나이: " + ageAvg);
+
+        double ageAvg2 = member.stream().   // Original Stream
+                filter(member1 -> member1.getGender() == Member.MALE). // Middle Progressing
+                mapToInt(Member::getAge).   // Middle Progressing
+                average().  // Last Progressing Stream => 집계처리
+                getAsDouble();
+
+        System.out.println("남자 회원 평균나이 for Stream : " + Math.ceil(ageAvg2));
     }
 }

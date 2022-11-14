@@ -36,13 +36,18 @@ public class ExpressionList {
     }
 
     public static void javaLambdaStream() {
-        List<String> listLambda = new ArrayList<>(Arrays.asList("JSP", "PHP", "ASP"));
-        listLambda.stream()
-                .filter("JSP"::contains)
-                .forEach(System.out::println);
+        // Stream 생성 > Generator
+        Stream<String> stringStream = Stream.generate(() -> "Hello").limit(5);
+        stringStream.forEach(System.out::println);
+    }
+
+    public static void StreamIterator() {
+        // (초기값 : 100, 100 -> 100 + 10) * 5
+        Stream<Integer> integerStream = Stream.iterate(100, n -> n + 10).limit(5);
+        integerStream.forEach(System.out::println);
     }
 
     public static void main(String[] args) {
-        javaLambdaStream();
+        StreamIterator();
     }
 }
