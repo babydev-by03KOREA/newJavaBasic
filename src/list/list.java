@@ -4,7 +4,7 @@ import java.util.*;
 
 public class list {
     public static void main(String[] args) {
-        // List > Array 한계를 극복하기 위해 만들어짐.
+        // List > Array 한계를 극복하기 위해 만들어짐. / 용량이 가변적임!
         // 검색이 많은 경우에 주로 사용됩니다. / 참조에 용의함
         // <> > Generic / Integer iData = (Integer)a.get(0); 이렇게 사용했었음.
         List<Integer> list1 = new ArrayList<>();
