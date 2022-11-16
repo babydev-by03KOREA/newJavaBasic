@@ -1,0 +1,12 @@
+* 기록하는 공간 *
+Program.java 생성
+class Program {} public class Program2 {} / 컴파일 에러
+public class Program {} class Program2 {} / OK
+자바에는 클래스 앞 접근제어자가 붙으면 그 클래스 이름은 *파일명과 동일* 해야 합니다.
+
+/* this & super's Differences
+    *  Super > 자손클래스에서 상속받은 맴버를 참조할때 사용됨! / 상속받은 맴버와 자신의 맴버 이름이 같을때!
+    *  This > 맴버변수와 지역변수의 이름이 같을 때 this 붙여서 비교한다! | 생성자 주입!
+    *  this * static 모두 static(class Method)에서는 사용이 불가능하다. 인스턴스 메서드에서만 사용이 가능하다!
+    *  클래스로부터 객체를 생성하는걸 '인스턴스화' 라고 하며, 만들어진 객체를 인스턴스라고 한다!
+    *  조상맴버(super)와 자신맴버(this)를 구별할때 사용되는것을 제외하면 근본적으로 같다! */

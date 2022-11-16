@@ -1,4 +1,4 @@
-package basic;
+package basic.Variable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

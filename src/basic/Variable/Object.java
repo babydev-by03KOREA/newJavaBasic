@@ -1,4 +1,4 @@
-package basic;
+package basic.Variable;
 
 public class Object {
     // Object Class는 모든 클래스의 최상위 클래스이다. 그 중 일부를 제정의하여 사용 가능하다.

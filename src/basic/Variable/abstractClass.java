@@ -1,4 +1,4 @@
-package basic;
+package basic.Variable;
 
 abstract class JSP { abstract void crud(); }
 class PHP extends JSP {

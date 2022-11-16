@@ -1,8 +1,8 @@
 package lambda.member;
 
 public class Member {
-    public static int MALE = 0;
-    public static int FEMALE = 1;
+    public static final int MALE = 0;
+    public static final int FEMALE = 1;
 
     private String name;
     private int gender;
