@@ -57,6 +57,8 @@ class Document {
         this("제목없음 " +  ++count);
     }
 
+    // ***분기점*** 제목이 있으면 아래 생성자를, 없으면 위 생성자를 실행시켜주세요.
+
     Document(String name) {
         this.name = name;
         System.out.println("문서 " + name + "이(가) 생성되었습니다.");
