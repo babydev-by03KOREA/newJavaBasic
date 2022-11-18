@@ -2,7 +2,7 @@ package basic.method;
 
 public class Declaration {
     // [method's Type(Out)] [method's Name] [parameters]
-    int add (int x, int y) {    // method's body / 메서드의 구현부
+    public int add (int x, int y) {    // method's body / 메서드의 구현부
         int result = x + y;
         return result;  // == return x + y;
     }
