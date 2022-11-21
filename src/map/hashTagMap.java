@@ -1,12 +1,11 @@
 package map;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class hashTagMap {
-    // <Key, Value>, Key 중복 불허 Value 중복 가능 / 동일한 키가 있는데 저장을 한다면 덮어쓰기 처리된다.
+    /* <Key, Value>, Key 중복 불허 Value 중복 가능 / 동일한 키가 있는데 저장을 한다면 덮어쓰기 처리된다.
+     * Value에 Null값도 허용한다! hash Algorithm을 이용하여 방대한 양의 데이터를 검색할 때 속도가 빠르다.
+     * 멀티 스레드에서는 HashTable을 사용하세요. */
     public static void hashMap() {
         Map<String, String> stringMap = new HashMap<>();
 
@@ -67,7 +66,38 @@ public class hashTagMap {
         }
     }
 
+    public static void hashTable() {
+        // synchronized method, multi thread Safety > 안전한 객체 삭제 및 추가
+        System.out.println("HashMap<>과 같은 동작을 한다. 다만 기존 코드의 호환을 위해 남았으모로, HashMap<> Recommend");
+        Map<String, String> hashTableMap = new Hashtable<String, String>();
+
+        hashTableMap.put("TVN", "응답하라 1988");
+        hashTableMap.put("MBC", "대학가요제");
+        hashTableMap.put("KBS", "전국 노래자랑");
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Key-Value / 방송 프로그램 맞추기! - 간첩판독 프로그램");
+            System.out.print("TVN, MBC, KBS 중 하나를 입력하세요 > ");
+            String Key = sc.nextLine();
+            System.out.print("유명한 방송을 하나 입력하세요! > ");
+            String Value = sc.nextLine();
+            System.out.println();
+            if (hashTableMap.containsKey(Key)) {
+                if (hashTableMap.get(Key).equals(Value)) {
+                    System.out.println("정답입니다!!");
+                    break;
+                } else {
+                    System.out.println("틀렸습니다! 다시!");
+                }
+            } else {
+                System.out.println("방송사 목록을 다시한번 확인해주세요.");
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        entryMapIterate();
+        hashTable();
     }
 }
